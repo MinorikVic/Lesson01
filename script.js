@@ -1,11 +1,10 @@
-var money = 10;
-var income = 15;
-var addExpenses = 22;
-var deposit = 0.5;
-var mission = 99;
-var period = 666;
+const money = 10;
+const income = 15;
+const addExpenses = 22;
+const deposit = 0.5;
+const mission = 99;
+const period = 666;
 
 
-alert(99);
-console.log(2);
-
+alert('Booooo!');
+console.log('Hello, little dog');
