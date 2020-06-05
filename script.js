@@ -1,9 +1,9 @@
-const money = 10;
-const income = 15;
-const addExpenses = 22;
-const deposit = 0.5;
-const mission = 99;
-const period = 666;
+let money = 10,
+    income = 15,
+    addExpenses = 22,
+    deposit = 0.5,
+    mission = 99,
+    period = 666;
 
 
 alert('Booooo!');
