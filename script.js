@@ -11,12 +11,14 @@ let money = +prompt('Ваш месячный доход?'),
     mission = 200000,
     period = 2,
     budgetDay = 30,
-    budgetMonth;
+    budgetMonth,
+    accumulatedMonth;
     
 addExpenses = addExpenses.split(',');
 budgetMonth = money - (amount1 + amount2);
 mission = Math.ceil(mission / budgetMonth);
 budgetDay = Math.floor(budgetMonth / budgetDay);
+accumulatedMonth = getAccumulatedMonth;
 
 if (budgetDay >= 1200) {
     alert('У вас высокий уровень дохода');
@@ -30,6 +32,22 @@ if ((budgetDay < 600 ) && (budgetDay > 0)) {
 if (budgetDay <= 0 ) {
     alert('Что то пошло не так');
 }
+
+function getExpensesMonth() {
+    return (amount1 + amount2);
+}
+console.log(getExpensesMonth());
+
+function getAccumulatedMonth() {
+    return (budgetMonth - getExpensesMonth);
+}
+console.log(getAccumulatedMonth());
+
+function getTargetMonth() {
+    return (accumulatedMonth);
+}
+console.log(getTargetMonth());
+
 
 console.log('Бюджет на месяц: '+ money);
 console.log('Статьи расходов: '+ addExpenses);
