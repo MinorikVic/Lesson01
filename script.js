@@ -49,20 +49,22 @@ console.log(addExpenses.toLowerCase().split(','));
 
 
 function getExpensesMonth() {
-    let sum = 0;
-    let control = 0;
-
-    do {
-        sum += +prompt('Во сколько это обойдется?');
-    } while (!isNumber(sum));
+    let sum = 0, control;
 
     for (let i = 0; i < 2; i++){
 
         expenses[i] = prompt('Введите обязательную статью расходов');
 
         sum += +prompt('Во сколько это обойдется?');
+    
+
+        do {
+            control = +prompt('Во сколько это обойдется?');
+        }while (!isNumber(sum));
+
+        sum += +control;
+
     }
-    console.log(expenses);
     
     return sum;
 }
@@ -72,6 +74,9 @@ function getAccumulatedMonth() {
 }
 
 function getTargetMonth() {
+    if (getTargetMonth < 0) {
+        alert('Цель не будет достигнута');
+    }
     return Math.ceil(mission / accumulatedMonth);
     
 }
